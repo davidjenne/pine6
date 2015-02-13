@@ -13,11 +13,6 @@ $colors[] = array(
 	'label' => __('Secondary Bar Color', 'pinehill2015')
 );
 
-$colors[] = array(
-	'slug'=>'search_bar_color', 
-	'default' => '#88C34B',
-	'label' => __('Search Bar Color', 'pinehill2015')
-);
 
 $colors[] = array(
 	'slug'=>'content_text_color', 
@@ -45,12 +40,6 @@ $colors[] = array(
 
 
 $colors[] = array(
-	'slug'=>'nav_bg_color', 
-	'default' => '#88C34B',
-	'label' => __('Primary Navigation BG Color', 'pinehill2015')
-);
-
-$colors[] = array(
 	'slug'=>'nav_bg_hover_color', 
 	'default' => '#88C34B',
 	'label' => __('Primary Navigation BG Hover Color', 'pinehill2015')
@@ -58,7 +47,7 @@ $colors[] = array(
 
 $colors[] = array(
 	'slug'=>'nav_text_color', 
-	'default' => '#88C34B',
+	'default' => 'transparent',
 	'label' => __('Primary Navigation Text Color', 'pinehill2015')
 );
 
@@ -109,17 +98,12 @@ function pinehill2015_style_header () {
 	$content_text_color = get_option ('content_text_color');?>
 <style>
 	#secondary, .site:before { background-color:  <?php echo $secondary_color; ?>; }
-	.search-toggle, .search-toggle:hover,.search-toggle.active,.search-box { background-color:  <?php echo $search_bar_color; ?>; }
-	h1,h2,h3,h4,h5,h6 {color: <?php echo $h1_color; ?>; }
 	.entry-title a { color: <?php echo $title_color;?>; }
 	.entry-title a:hover { color: <?php echo $title_hover_color;?>; }
 	.primary-navigation li:hover > a,.primary-navigation li.focus > a,.primary-navigation li:active > a,.primary-navigation ul ul a:hover,
 	.primary-navigation ul ul li.focus > a {
 		background-color: <?php echo $nav_bg_hover_color;?>;
 		color: <?php echo $nav_text_hover_color;?>;	}
-	.primary-navigation li a, .primary-navigation ul ul a,.primary-navigation ul ul li a {
-		background-color: <?php echo $nav_bg_color;?>;
-		color: <?php echo $nav_text_color;?>;	}
 	p {color: <?php echo $content_text_color;?>; }
 </style>
 

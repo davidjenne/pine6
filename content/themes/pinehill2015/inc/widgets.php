@@ -102,7 +102,7 @@ class Twenty_Fourteen_Ephemera_Widget extends WP_Widget {
 
 		if ( $ephemera->have_posts() ) :
 			$tmp_content_width = $GLOBALS['content_width'];
-			$GLOBALS['content_width'] = 306;
+			$GLOBALS['content_width'] = 290;
 
 			echo $args['before_widget'];
 			?>
