@@ -114,13 +114,11 @@ input[type="submit"]:focus {
  * -----------------------------------------------------------------------------
  */
 
-/* Ensure that there is no gap between the header and
-	 the admin bar for WordPress versions before 3.8. */
-
 
 .header-main {
-background-color: transparent;
-min-height: 48px;
+	min-height: 48px;
+	float:right;
+	background-color:#373737;
 }
 
 .site-header {
@@ -143,6 +141,8 @@ min-height: 48px;
  * 5.0 Navigation
  * -----------------------------------------------------------------------------
  */
+
+
 
 .site-navigation ul {
 	list-style: none;
@@ -187,14 +187,6 @@ min-height: 48px;
 
 .primary-navigation ul ul a{
 	background-color: #4e4636;
-}
-
-#menu-top_menu {
-	text-align: center;
-}
-
-#menu-top_menu {
-	background: linear-gradient(to top, #363636 0%, #545454 100%) !important;
 }
 
 .search-toggle {
@@ -339,19 +331,51 @@ min-height: 48px;
  */
 
 
+
+@-ms-viewport {
+	width: device-width;
+}
+
+@viewport {
+	width: device-width;
+}
+
 @media screen and (max-width: 400px) {
 
 	.featured-content .post-thumbnail img {
-		 width: auto;
+		 width: 75%;
  		 max-width: 400px;
  		 height: auto;
- 		 max-height: 96px;
+ 		 max-height: auto;
  		 padding-top:0;
 	}
 
 	.featured-content .post-thumbnail {
- 		 padding-top:96px;
+ 		 padding-top:70px;
  		 overflow: hidden;
+	}
+
+	.featured-content .entry-title {
+	font-size: 20px;
+	font-weight: 500;
+	line-height: 1.1;
+	text-align: right;
+	margin: 0;
+	text-transform: uppercase;
+	}
+
+
+	.featured-content .entry-header{
+		padding:0 5px 5px 25px;
+		min-height:80px;
+	}
+
+	h1.entry-title{
+		margin-bottom: 20px;
+	}
+
+	.cat-links{
+		display: none;
 	}
 
 	#masthead {
@@ -361,7 +385,7 @@ min-height: 48px;
 	}
 
 	.primary-navigation {
-		padding-top: 0;
+		padding: 0;
 	}
 
 	.menu-top-menu-container div{
@@ -381,7 +405,7 @@ min-height: 48px;
 
 	.content-sidebar {
 		padding:20px 5px 5px 5px;
-		height: 500px;
+		height: 400px;
 	}
 
 	.primary-sidebar {
@@ -394,11 +418,7 @@ min-height: 48px;
 
 }
 
-@media screen and (min-width: 846px) {
-	.content-area,
-	.content-sidebar {
-		padding-top: 10px;
-}
+
 
 
 @media screen and (min-width: 673px) {
@@ -407,21 +427,21 @@ min-height: 48px;
 	}
 }
 
-@media screen and (min-width: 783px){
+@media screen and (min-width: 783px) {
 	.primary-navigation {
-		float: right;
-		font-size: 11px;
 		margin: 0;
-		padding: 0;
-		text-transform: uppercase;
 	}
 
-	.site-navigation a{
+	.site-navigation a {
 		text-align: left;
 	}
 }
 
-
+@media screen and (min-width: 846px) {
+	.content-area,
+	.content-sidebar {
+		padding-top: 10px;
+}
 
 @media screen and (min-width: 1080px) {
 
@@ -429,9 +449,11 @@ min-height: 48px;
 		margin-left: -27%;
 		width: 27%;
 	}
+}
 
-	#menu-top_menu {
-	background:#6f0602 !important;
+@media screen and (min-width: 1081px) {
+
+	.header-main {
+		background-color:transparent !important;
 	}
-
 }

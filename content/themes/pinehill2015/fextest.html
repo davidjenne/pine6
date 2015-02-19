@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      html, body {
+        margin:  0;
+        padding: 0;
+        height:  100%;
+      }
+
+      .l-fit-height {
+        display: table;
+        height:  100%;
+      }
+
+      .l-fit-height-row {
+        display: table-row;
+        height:  1px;
+      }
+
+      .l-fit-height-row-content {
+        /* Firefox requires this */
+        display: table-cell;
+      }
+
+      .l-fit-height-row-expanded {
+        height:  100%;
+        display: table-row;
+      }
+
+      .l-fit-height-row-expanded > .l-fit-height-row-content {
+        height: 100%;
+        width:  100%;
+      }
+
+      .l-scroll {
+        /* Firefox requires this to do the absolute positioning correctly */
+        display:    inline-block;
+        overflow-y: auto;
+        position:   relative;
+      }
+
+      .l-scroll-content {
+        position: absolute;
+        top:      0;
+        bottom:   0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="l-fit-height">
+      <section class="l-fit-height-row">
+        <div class="l-fit-height-row-content">
+          Header
+        </div>
+      </section>
+      <section class="l-fit-height-row-expanded">
+        <div class="l-fit-height-row-content l-scroll">
+          <div class="l-scroll-content">
+            <p>Foo</p>
+            <p>Foo</p>
+            <p>Foo</p>
+            <p>Foo</p>
+            <p>Foo</p>
+            <p>Foo</p>
+            <p>Foo</p>
+            <p>Foo</p>
+            <p>Foo</p>
+            <p>Foo</p>
+            <p>Foo</p>
+          </div>
+        </div>
+      </section>
+      <section class="l-fit-height-row">
+        <div class="l-fit-height-row-content">
+          Footer
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
