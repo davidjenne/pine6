@@ -107,5 +107,7 @@ function pinehill2015_style_header () {
 	p {color: <?php echo $content_text_color;?>; }
 </style>
 
+
+
 <?php 	
 }
